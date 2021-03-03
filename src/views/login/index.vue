@@ -1,6 +1,13 @@
 <template>
 <div id="login">
-    <p class="aa">登录页面gkjsagdsdjgk</p>
+    <el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+  点我打开
+</el-button>
+<el-drawer
+  title="我是标题" :visible.sync="drawer" :with-header="false">
+  <span>我来啦!</span>
+</el-drawer>
+
 </div>
 </template>
 
@@ -10,21 +17,16 @@ export default {
   props:{},
   data(){
     return {
-    }
+      drawer: false,
+    };
   },
   watch:{},
   computed:{},
   methods:{},
   created(){},
   mounted(){}
-}
+};
 </script>
 <style lang="scss" scoped>
-#login{
-  height: 50vh;
-  background-color: rgb(53, 21, 21);
-}
-.aa{
-  font-size: 20px;
-}
 </style>
+
